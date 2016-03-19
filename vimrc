@@ -6,6 +6,10 @@
 "Email:
 "   zgy0106@gmail.com
 """"""""""""""""""""""""""""""""""""""""""""""
+" test shell
+if $SHELL =~ "fish"
+	set shell=/bin/sh
+endif
 
 set history=500  "历史记录最大值
 
