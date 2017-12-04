@@ -200,7 +200,7 @@ func! Selecttype()
 	"""""""""""""""""""""""""""""""""""""""""""""
 
 	"新建.c, .h, ,sh, .java, .py, .f90 自动插入文件头
-	autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java,*.f90,*.py exec ":call SetTitle()"
+	autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java,*.f90,*.py,*.F90 exec ":call SetTitle()"
 
 	"定义函数SetTitle，自动插入文件头 
 
@@ -562,10 +562,8 @@ func! Rungdb()
 	" Remember info about open buffers on close
 	set viminfo^=%
 
-if &filetype=='tex'
-set textwidth=80
-else
-set textwidth=0
+if &filetype == 'tex'
+	autocmd FileType tex setlocal tw=70
 endif
 
 set background=dark
