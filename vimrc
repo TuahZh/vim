@@ -568,3 +568,7 @@ endif
 
 set background=dark
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+" some key map for emacs use habbits
+map! <C-f> <Right>
+map! <C-b> <Left>
